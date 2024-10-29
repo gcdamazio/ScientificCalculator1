@@ -23,10 +23,45 @@ public class Console {
     }
 
     public static Integer getIntegerInput(String prompt) {
-        return null;
+        Scanner scanner = new Scanner(System.in);
+        println(prompt);
+        Integer userInput = scanner.nextInt();
+        return userInput;
     }
 
     public static Double getDoubleInput(String prompt) {
         return null;
     }
+
+    public static Double Calculation (String operator, double x, double y) {
+        Core core = new Core();
+        int choice = 0;
+        while (choice != 5) {
+            System.out.println("Your operator");
+            Scanner sc = new Scanner(System.in);
+            choice = sc.nextInt();
+            switch (choice) {
+                case 1: {
+                    return core.subtract(x, y);
+                }
+                case 2: {
+                    return core.multiply(x, y);
+                }
+                case 3: {
+                    return core.exp(x, y);
+                }
+                case 4: {
+                    return core.divide(x, y);
+                }
+                case 5: {
+                    break;
+                }
+            }
+
+        }
+
+        return 0.0;
+    }
 }
+
+
