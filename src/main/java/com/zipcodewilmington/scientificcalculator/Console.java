@@ -2,9 +2,6 @@ package com.zipcodewilmington.scientificcalculator;
 
 import java.util.Scanner;
 
-/**
- * Created by leon on 2/9/18.
- */
 public class Console {
 
     public static void print(String output, Object... args) {
@@ -18,50 +15,39 @@ public class Console {
     public static String getStringInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
         println(prompt);
-        String userInput = scanner.nextLine();
-        return userInput;
+        return scanner.nextLine();
     }
 
     public static Integer getIntegerInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
         println(prompt);
-        Integer userInput = scanner.nextInt();
-        return userInput;
+        return scanner.nextInt();
     }
 
     public static Double getDoubleInput(String prompt) {
-        return null;
+        Scanner scanner = new Scanner(System.in);
+        println(prompt);
+        return scanner.nextDouble();
     }
 
-    public static Double Calculation (String operator, double x, double y) {
+    public static Double Calculation(String operator, double x, double y) {
         Core core = new Core();
-        int choice = 0;
-        while (choice != 5) {
-            System.out.println("Your operator");
-            Scanner sc = new Scanner(System.in);
-            choice = sc.nextInt();
-            switch (choice) {
-                case 1: {
-                    return core.subtract(x, y);
-                }
-                case 2: {
-                    return core.multiply(x, y);
-                }
-                case 3: {
-                    return core.exp(x, y);
-                }
-                case 4: {
-                    return core.divide(x, y);
-                }
-                case 5: {
-                    break;
-                }
-            }
 
+        switch (operator) {
+            case "1":
+            case "+":
+            case "plus":
+            case "add":
+                return core.sum(x, y);
+            case "2":
+            case "-":
+            case "subtract":
+            case "minus":
+                return core.subtract(x, y);
+            default:
+                println("---Can not recognize operator. Try again!---");
+                return null;
         }
-
-        return 0.0;
     }
 }
-
 

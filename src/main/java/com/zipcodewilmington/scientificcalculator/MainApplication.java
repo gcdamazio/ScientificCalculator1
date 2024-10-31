@@ -3,16 +3,52 @@ package com.zipcodewilmington.scientificcalculator;
 /**
  * Created by leon on 2/9/18.
  */
+
 public class MainApplication {
     public static void main(String[] args) {
-        Console.println("Welcome to my calculator!");
-        String operator = Console.getStringInput("Type your operator");
-        Integer input1 = Console.getIntegerInput("Enter first number");
-        Integer input2 = Console.getIntegerInput("Enter second number");
-        //Double d = Console.getDoubleInput("Enter a double.");
+        //colors
+        String reset = "\u001B[0m";
+        String yellow = "\u001B[33m";
+        String cyan = "\u001B[36m";
+        String purple = "\u001B[35m";
 
-        //Console.println("The user input %s as a string", s);
-        //Console.println("The user input %s as a integer", i);
-        //Console.println("The user input %s as a d", d);
+        System.out.println(cyan + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + reset);
+        System.out.println(cyan + "|" + reset + yellow + "   Welcome to Xylophanes Calculator!    "  + reset + cyan +
+                "|" + reset);
+        System.out.println(cyan + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + reset);
+        System.out.println();
+
+        boolean running = true;
+        while (running) {
+            System.out.println("How can I help you today?");
+            System.out.println("1: Add");
+            System.out.println("2: Subtract");
+            System.out.println("5: Exit");
+
+            String choice = Console.getStringInput("Enter your choice or any operator:");
+
+
+            if (choice.equals("5") || choice.equals("exit")) {
+                running = false;
+                Console.println("[Exiting the calculator...]");
+                System.out.println(yellow + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                System.out.println("|" + reset + purple + "   Numbers crunched, answers found. Thanks for using our calculator!    " + reset + yellow +
+                        "|");
+                System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" + reset);
+                System.out.println();
+                continue;
+
+            }
+
+            double input1 = Console.getDoubleInput("Enter first number:");
+            double input2 = Console.getDoubleInput("Enter second number:");
+
+            Double result = Console.Calculation(choice, input1, input2);
+            if (result != null) {
+                System.out.println("\n" + purple + "The result of your calculation is: " + result + reset);
+                System.out.println();
+            }
+        }
+
     }
 }
