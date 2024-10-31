@@ -39,11 +39,12 @@ public class MainApplication {
             System.out.println(" 8: Percentage");
             System.out.println(" 9: Log Value");
             System.out.println(" 10:Invert Sign");
+            System.out.println(" 12:Sin");
             System.out.println(" 11:Exit");
 
             String choice = Console.getStringInput("Enter your choice or any operator:");
             Set<String> set1 = new HashSet<>();
-            set1.addAll(Set.of("3","4","10"));
+            set1.addAll(Set.of("3","4","10","12"));
             Set<String> set2 = new HashSet<>();
             set2.addAll(Set.of("1","2","5","6","7","8","9"));
             //String[] list1 ={"3","4","10"};

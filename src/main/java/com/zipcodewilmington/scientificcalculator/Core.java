@@ -4,6 +4,8 @@ package com.zipcodewilmington.scientificcalculator;
 import java.lang.Math;
 import java.util.Scanner;
 
+import static java.lang.Math.toDegrees;
+
 public class Core {
     public double sum(double input1,double input2) {
         return input1 + input2;
@@ -63,27 +65,33 @@ public class Core {
     }
 
     public double sine(double input1) {
-        return Math.sin(input1);
+        double radians = Math.toRadians(input1);
+        return Math.sin(radians);
     }
 
     public double cosine(double input1) {
-        return Math.cos(input1);
+        double radians = Math.toRadians(input1);
+        return Math.cos(radians);
     }
 
     public double tangent(double input1) {
-        return Math.tan(input1);
+        double radians = Math.toRadians(input1);
+        return Math.tan(radians);
     }
 
     public double inverseSine(double input1) {
-        return 1/Math.sin(input1);
+        double radians = Math.toRadians(input1);
+        return 1/Math.sin(radians);
     }
 
     public double inverseCosine(double input1) {
-        return 1/Math.cos(input1);
+        double radians = Math.toRadians(input1);
+        return 1/Math.cos(radians);
     }
 
     public double inverseTangent(double input1) {
-        return 1 / Math.tan(input1);
+        double radians = Math.toRadians(input1);
+        return 1/Math.tan(radians);
     }
 
     public double factorial(double input1){

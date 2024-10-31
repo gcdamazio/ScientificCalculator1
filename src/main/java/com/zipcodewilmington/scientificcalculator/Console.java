@@ -65,6 +65,8 @@ public class Console {
                     return core.squareRoot(x);
                 case "10":
                     return core.invertSign(x);
+                case "12":
+                    return core.sine(x);
                 default:
                     println("---Can not recognize operator. Try again!---");
                     return null;
