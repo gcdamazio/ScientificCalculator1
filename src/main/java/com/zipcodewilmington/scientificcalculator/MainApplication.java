@@ -1,6 +1,8 @@
 package com.zipcodewilmington.scientificcalculator;
 
+import java.util.HashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 /**
  * Created by leon on 2/9/18.
@@ -40,7 +42,12 @@ public class MainApplication {
             System.out.println(" 11:Exit");
 
             String choice = Console.getStringInput("Enter your choice or any operator:");
-            Integer[] list1 =
+            Set<String> set1 = new HashSet<>();
+            set1.addAll(Set.of("3","4","10"));
+            Set<String> set2 = new HashSet<>();
+            set2.addAll(Set.of("1","2","5","6","7","8","9"));
+            //String[] list1 ={"3","4","10"};
+            //String[] list2 ={"1","2","5","6","7","8","9"};
 
             if (choice.equals("11") || choice.equals("exit")) {
                 running = false;
@@ -53,14 +60,14 @@ public class MainApplication {
                 continue;
 
             }
-            else if(choice.equals("1")) {
+            else if(set2.contains(choice)) {
                 double input1 = Console.getDoubleInput("Enter first number:");
                 double input2 = Console.getDoubleInput("Enter second number:");
                 Double result = Console.Calculation(choice, input1, input2);
                 System.out.println("\n" + purple + "The result of your calculation is: " + result + reset);
                 //double memory = result;
             }
-            else if(choice.equals("3")) {
+            else if(set1.contains(choice)) {
                 double input1 = Console.getDoubleInput("Enter first number:");
                 Double result = Console.Calculation2(choice, input1);
                 System.out.println("\n" + purple + "The result of your calculation is: " + result + reset);

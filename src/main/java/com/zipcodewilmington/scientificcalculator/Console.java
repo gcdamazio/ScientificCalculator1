@@ -35,15 +35,20 @@ public class Console {
 
         switch (operator) {
             case "1":
-            case "+":
-            case "plus":
-            case "add":
                 return core.sum(x, y);
             case "2":
-            case "-":
-            case "subtract":
-            case "minus":
                 return core.subtract(x, y);
+            case "5":
+                return core.multiply(x, y);
+            case "6":
+                return core.divide(x, y);
+            case "7":
+                return core.exp(x, y);
+            case "8":
+                return core.percentage(x, y);
+            case "9":
+                return core.logValue(x, y);
+
 
             default:
                 println("---Can not recognize operator. Try again!---");
@@ -56,6 +61,10 @@ public class Console {
 
                 case "3":
                     return core.square(x);
+                case "4":
+                    return core.squareRoot(x);
+                case "10":
+                    return core.invertSign(x);
                 default:
                     println("---Can not recognize operator. Try again!---");
                     return null;

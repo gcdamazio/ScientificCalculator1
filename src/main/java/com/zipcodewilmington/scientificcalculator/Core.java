@@ -46,47 +46,47 @@ public class Core {
         return (input1 / input2) * 100;
     }
 
-    public static double logValue(double input1,double input2){
+    public double logValue(double input1,double input2){
         return Math.log(input1) / Math.log(input2);
     }
 
-    public static double inverseLog(double input1){
+    public double inverseLog(double input1){
         return Math.exp(Math.log(input1));
     }
 
-    public static double naturalLog(double input1){
+    public double naturalLog(double input1){
         return Math.log(input1);
     }
 
-    public static double inverseNatLog(double input1){
+    public double inverseNatLog(double input1){
         return Math.exp(input1);
     }
 
-    public static double sine(double input1) {
+    public double sine(double input1) {
         return Math.sin(input1);
     }
 
-    public static double cosine(double input1) {
+    public double cosine(double input1) {
         return Math.cos(input1);
     }
 
-    public static double tangent(double input1) {
+    public double tangent(double input1) {
         return Math.tan(input1);
     }
 
-    public static double inverseSine(double input1) {
+    public double inverseSine(double input1) {
         return 1/Math.sin(input1);
     }
 
-    public static double inverseCosine(double input1) {
+    public double inverseCosine(double input1) {
         return 1/Math.cos(input1);
     }
 
-    public static double inverseTangent(double input1) {
+    public double inverseTangent(double input1) {
         return 1 / Math.tan(input1);
     }
 
-    public static double factorial(double input1){
+    public double factorial(double input1){
         double result = 1;
         double floorNum = Math.floor(input1);
         for ( double i = floorNum; i > 0; i--){
