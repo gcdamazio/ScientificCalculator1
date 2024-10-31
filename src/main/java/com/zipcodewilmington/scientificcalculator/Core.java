@@ -8,16 +8,94 @@ public class Core {
     public double sum(double input1,double input2) {
         return input1 + input2;
     }
+
     public double subtract(double input1,double input2) {
         return input1 - input2;
     }
+
     public double multiply(double input1,double input2) {
         return input1 * input2;
     }
+
     public double divide(double input1,double input2 ) {
         return input1 / input2;
     }
+
     public double square(double input1) {
         return Math.pow(input1, 2);
     }
+
+    public double squareRoot(double input1) {
+        return Math.sqrt(input1);
+    }
+
+    public double exp(double input1, double input2) {
+        double pow2 = Math.pow(input1, input2);
+        return pow2;
+    }
+
+    public double invertSign(double input1) {
+        return input1 = -input1;
+    }
+
+    public double inverse(double input1) {
+        return input1 = 1 / input1;
+    }
+
+    public Double percentage(double input1 ,double input2){
+        return (input1 / input2) * 100;
+    }
+
+    public static double logValue(double input1,double input2){
+        return Math.log(input1) / Math.log(input2);
+    }
+
+    public static double inverseLog(double input1){
+        return Math.exp(Math.log(input1));
+    }
+
+    public static double naturalLog(double input1){
+        return Math.log(input1);
+    }
+
+    public static double inverseNatLog(double input1){
+        return Math.exp(input1);
+    }
+
+    public static double sine(double input1) {
+        return Math.sin(input1);
+    }
+
+    public static double cosine(double input1) {
+        return Math.cos(input1);
+    }
+
+    public static double tangent(double input1) {
+        return Math.tan(input1);
+    }
+
+    public static double inverseSine(double input1) {
+        return 1/Math.sin(input1);
+    }
+
+    public static double inverseCosine(double input1) {
+        return 1/Math.cos(input1);
+    }
+
+    public static double inverseTangent(double input1) {
+        return 1 / Math.tan(input1);
+    }
+
+    public static double factorial(double input1){
+        double result = 1;
+        double floorNum = Math.floor(input1);
+        for ( double i = floorNum; i > 0; i--){
+            result = result * i;
+        }
+        return result;
+    }
+//    public double memoryCall(){
+//        double memory = 0;
+//        return memory;
+//    }
 }

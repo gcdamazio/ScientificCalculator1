@@ -27,15 +27,22 @@ public class MainApplication {
         boolean running = true;
         while (running) {
             System.out.println("How can I help you today?");
-            System.out.println("1: Add");
-            System.out.println("2: Subtract");
-            System.out.println("3: Square");
-            System.out.println("5: Exit");
+            System.out.println(" 1: Add");
+            System.out.println(" 2: Subtract");
+            System.out.println(" 3: Square");
+            System.out.println(" 4: Square Root");
+            System.out.println(" 5: Multiply");
+            System.out.println(" 6: Divide");
+            System.out.println(" 7: Exponential");
+            System.out.println(" 8: Percentage");
+            System.out.println(" 9: Log Value");
+            System.out.println(" 10:Invert Sign");
+            System.out.println(" 11:Exit");
 
             String choice = Console.getStringInput("Enter your choice or any operator:");
+            Integer[] list1 =
 
-
-            if (choice.equals("5") || choice.equals("exit")) {
+            if (choice.equals("11") || choice.equals("exit")) {
                 running = false;
                 Console.println("[Exiting the calculator...]");
                 System.out.println(yellow + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -51,11 +58,13 @@ public class MainApplication {
                 double input2 = Console.getDoubleInput("Enter second number:");
                 Double result = Console.Calculation(choice, input1, input2);
                 System.out.println("\n" + purple + "The result of your calculation is: " + result + reset);
+                //double memory = result;
             }
             else if(choice.equals("3")) {
                 double input1 = Console.getDoubleInput("Enter first number:");
                 Double result = Console.Calculation2(choice, input1);
                 System.out.println("\n" + purple + "The result of your calculation is: " + result + reset);
+                //double memory = result;
             }
 //            else {
 //                System.out.println("Sorry invalid operator");
