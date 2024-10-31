@@ -46,13 +46,13 @@ public class MainApplication {
                 continue;
 
             }
-            else if(choice == "1") {
+            else if(choice.equals("1")) {
                 double input1 = Console.getDoubleInput("Enter first number:");
                 double input2 = Console.getDoubleInput("Enter second number:");
                 Double result = Console.Calculation(choice, input1, input2);
                 System.out.println("\n" + purple + "The result of your calculation is: " + result + reset);
             }
-            else if(choice == "3") {
+            else if(choice.equals("3")) {
                 double input1 = Console.getDoubleInput("Enter first number:");
                 Double result = Console.Calculation2(choice, input1);
                 System.out.println("\n" + purple + "The result of your calculation is: " + result + reset);
