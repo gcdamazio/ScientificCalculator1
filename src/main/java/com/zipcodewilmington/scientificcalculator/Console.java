@@ -44,10 +44,23 @@ public class Console {
             case "subtract":
             case "minus":
                 return core.subtract(x, y);
+            case "3":
+                return core.square(x);
             default:
                 println("---Can not recognize operator. Try again!---");
                 return null;
         }
+    }public static Double Calculation2(String operator, double x) {
+            Core core = new Core();
+
+            switch (operator) {
+
+                case "3":
+                    return core.square(x);
+                default:
+                    println("---Can not recognize operator. Try again!---");
+                    return null;
+            }
     }
 }
 

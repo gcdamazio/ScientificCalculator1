@@ -1,5 +1,11 @@
 package com.zipcodewilmington.scientificcalculator;
 
+import java.util.Scanner;
+
+/**
+ * Created by leon on 2/9/18.
+ */
+
 /**
  * Created by leon on 2/9/18.
  */
@@ -23,6 +29,7 @@ public class MainApplication {
             System.out.println("How can I help you today?");
             System.out.println("1: Add");
             System.out.println("2: Subtract");
+            System.out.println("3: Square");
             System.out.println("5: Exit");
 
             String choice = Console.getStringInput("Enter your choice or any operator:");
@@ -39,15 +46,20 @@ public class MainApplication {
                 continue;
 
             }
-
-            double input1 = Console.getDoubleInput("Enter first number:");
-            double input2 = Console.getDoubleInput("Enter second number:");
-
-            Double result = Console.Calculation(choice, input1, input2);
-            if (result != null) {
+            else if(choice == "1") {
+                double input1 = Console.getDoubleInput("Enter first number:");
+                double input2 = Console.getDoubleInput("Enter second number:");
+                Double result = Console.Calculation(choice, input1, input2);
                 System.out.println("\n" + purple + "The result of your calculation is: " + result + reset);
-                System.out.println();
             }
+            else if(choice == "3") {
+                double input1 = Console.getDoubleInput("Enter first number:");
+                Double result = Console.Calculation2(choice, input1);
+                System.out.println("\n" + purple + "The result of your calculation is: " + result + reset);
+            }
+//            else {
+//                System.out.println("Sorry invalid operator");
+//            }
         }
 
     }
