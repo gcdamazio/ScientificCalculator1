@@ -48,8 +48,6 @@ public class Console {
                 return core.percentage(x, y);
             case "9":
                 return core.logValue(x, y);
-
-
             default:
                 println("---Can not recognize operator. Try again!---");
                 return null;
@@ -58,15 +56,24 @@ public class Console {
             Core core = new Core();
 
             switch (operator) {
-
                 case "3":
                     return core.square(x);
                 case "4":
                     return core.squareRoot(x);
                 case "10":
                     return core.invertSign(x);
-                case "12":
+                case "11":
                     return core.sine(x);
+                case "12":
+                    return core.cosine(x);
+                case "13":
+                    return core.tangent(x);
+                case "14":
+                    return core.inverseLog(x);
+                case "15":
+                    return core.naturalLog(x);
+                case "16":
+                    return core.inverseNatLog(x);
                 default:
                     println("---Can not recognize operator. Try again!---");
                     return null;
