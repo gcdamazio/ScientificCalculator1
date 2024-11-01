@@ -27,9 +27,13 @@ public class MainApplication {
         System.out.println();
 
         boolean running = true;
+        String[] listOfOperations = {"0", "Add", "Subtract", "Square", "Square Root", "Multiply" , "Divide", "Exponential", "Percentage", "Log Value", "Invert Sign", "Sine", "Cosine","Tangent","Inverse Log","Natural Log","Inverse Natural Log","Exit"};
         while (running) {
             System.out.println("How can I help you today?");
-            System.out.println(" 1: Add");
+            for (int i = 1; i <= 17; i ++){
+                System.out.println(i + ". " + listOfOperations[i]);
+            }
+            /*System.out.println(" 1: Add");
             System.out.println(" 2: Subtract");
             System.out.println(" 3: Square");
             System.out.println(" 4: Square Root");
@@ -39,18 +43,25 @@ public class MainApplication {
             System.out.println(" 8: Percentage");
             System.out.println(" 9: Log Value");
             System.out.println(" 10:Invert Sign");
-            System.out.println(" 12:Sin");
-            System.out.println(" 11:Exit");
+            System.out.println(" 11:Sine");
+            System.out.println(" 12:Cosine");
+            System.out.println(" 13:Tangent");
+            Inverse Log
+            Natural Log
+            Inverse Natural Log
 
-            String choice = Console.getStringInput("Enter your choice or any operator:");
+
+            System.out.println(" 12:Exit");*/
+
+            String choice = Console.getStringInput("\nEnter your choice or any operator:");
             Set<String> set1 = new HashSet<>();
-            set1.addAll(Set.of("3","4","10","12"));
+            set1.addAll(Set.of("3","4","10","11", "12", "13", "14", "15", "16"));
             Set<String> set2 = new HashSet<>();
             set2.addAll(Set.of("1","2","5","6","7","8","9"));
             //String[] list1 ={"3","4","10"};
             //String[] list2 ={"1","2","5","6","7","8","9"};
 
-            if (choice.equals("11") || choice.equals("exit")) {
+            if (choice.equals("17") || choice.equals("exit")) {
                 running = false;
                 Console.println("[Exiting the calculator...]");
                 System.out.println(yellow + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -69,14 +80,14 @@ public class MainApplication {
                 //double memory = result;
             }
             else if(set1.contains(choice)) {
-                double input1 = Console.getDoubleInput("Enter first number:");
+                double input1 = Console.getDoubleInput("Enter your number:");
                 Double result = Console.Calculation2(choice, input1);
                 System.out.println("\n" + purple + "The result of your calculation is: " + result + reset);
                 //double memory = result;
             }
-//            else {
-//                System.out.println("Sorry invalid operator");
-//            }
+        else {
+                System.out.println("---Can not recognize operator. Try again!---");
+           }
         }
 
     }
