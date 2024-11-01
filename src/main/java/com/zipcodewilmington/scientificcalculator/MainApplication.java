@@ -56,6 +56,8 @@ public class MainApplication {
             String choice = Console.getStringInput("\nEnter your choice or any operator:");
             Set<String> set1 = new HashSet<>();
             set1.addAll(Set.of("3","4","10","11", "12", "13", "14", "15", "16"));
+            Set<String> set3 = new HashSet<>();
+            set3.addAll(Set.of("12", "13", "11"));
             Set<String> set2 = new HashSet<>();
             set2.addAll(Set.of("1","2","5","6","7","8","9"));
             //String[] list1 ={"3","4","10"};
@@ -78,8 +80,13 @@ public class MainApplication {
                 Double result = Console.Calculation(choice, input1, input2);
                 System.out.println("\n" + purple + "The result of your calculation is: " + result + reset);
                 //double memory = result;
-            }
-            else if(set1.contains(choice)) {
+            } else if (set3.contains(choice)) {
+                double input1 = Console.getDoubleInput("Your input must be in degree format\nEnter your number:");
+                Double result = Console.Calculation2(choice, input1);
+                System.out.println("\n" + purple + "The result of your calculation is: " + result + reset);
+                //double memory = result;
+
+            } else if(set1.contains(choice)) {
                 double input1 = Console.getDoubleInput("Enter your number:");
                 Double result = Console.Calculation2(choice, input1);
                 System.out.println("\n" + purple + "The result of your calculation is: " + result + reset);

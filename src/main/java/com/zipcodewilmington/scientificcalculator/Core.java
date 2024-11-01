@@ -2,9 +2,6 @@ package com.zipcodewilmington.scientificcalculator;
 
 
 import java.lang.Math;
-import java.util.Scanner;
-
-import static java.lang.Math.toDegrees;
 
 public class Core {
     public double sum(double input1,double input2) {
@@ -65,6 +62,7 @@ public class Core {
     }
 
     public double sine(double input1) {
+        System.out.println("Your input should be degree");
         double radians = Math.toRadians(input1);
         return Math.sin(radians);
     }
