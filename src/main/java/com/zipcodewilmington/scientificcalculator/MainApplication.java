@@ -27,10 +27,10 @@ public class MainApplication {
         System.out.println();
 
         boolean running = true;
-        String[] listOfOperations = {"0", "Add", "Subtract", "Square", "Square Root", "Multiply" , "Divide", "Exponential", "Percentage", "Log Value", "Invert Sign", "Sine", "Cosine","Tangent","Inverse Log","Natural Log","Inverse Natural Log","Exit"};
+        String[] listOfOperations = {"0", "Add", "Subtract", "Square", "Square Root", "Multiply" , "Divide", "Exponential", "Percentage", "Log Value", "Invert Sign", "Sine", "Cosine","Tangent","Inverse Log","Natural Log","Inverse Natural Log","Celsius to Fahrenheit", "Fahrenheit to Celsius","Exit"};
         while (running) {
             System.out.println("How can I help you today?");
-            for (int i = 1; i <= 17; i ++){
+            for (int i = 1; i <= 19; i ++){
                 System.out.println(i + ". " + listOfOperations[i]);
             }
             /*System.out.println(" 1: Add");
@@ -63,7 +63,7 @@ public class MainApplication {
             //String[] list1 ={"3","4","10"};
             //String[] list2 ={"1","2","5","6","7","8","9"};
 
-            if (choice.equals("17") || choice.equals("exit")) {
+            if (choice.equals("19") || choice.equals("exit")) {
                 running = false;
                 Console.println("[Exiting the calculator...]");
                 System.out.println(yellow + "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -74,25 +74,46 @@ public class MainApplication {
                 continue;
 
             }
+
+            //Extra feature
+            else if (choice.equals("17")) { // Celsius to Fahrenheit
+                double input1 = Console.getDoubleInput("Enter temperature in Celsius:");
+                Double result = Console.Calculation2(choice, input1);
+                System.out.println("\n" + purple + "The result is: " + result + " °F" + reset);
+            }
+            else if (choice.equals("18")) { // Fahrenheit to Celsius
+                double input1 = Console.getDoubleInput("Enter temperature in Fahrenheit:");
+                Double result = Console.Calculation2(choice, input1);
+                System.out.println("\n" + purple + "The result is: " + result + " °C" + reset);
+            }
+
+           //2 inputs
             else if(set2.contains(choice)) {
                 double input1 = Console.getDoubleInput("Enter first number:");
                 double input2 = Console.getDoubleInput("Enter second number:");
                 Double result = Console.Calculation(choice, input1, input2);
                 System.out.println("\n" + purple + "The result of your calculation is: " + result + reset);
                 //double memory = result;
-            } else if (set3.contains(choice)) {
+            }
+
+            //degree format message
+            else if (set3.contains(choice)) {
                 double input1 = Console.getDoubleInput("Your input must be in degree format\nEnter your number:");
                 Double result = Console.Calculation2(choice, input1);
                 System.out.println("\n" + purple + "The result of your calculation is: " + result + reset);
                 //double memory = result;
 
-            } else if(set1.contains(choice)) {
+            }
+
+            //1 input
+            else if(set1.contains(choice)) {
                 double input1 = Console.getDoubleInput("Enter your number:");
                 Double result = Console.Calculation2(choice, input1);
                 System.out.println("\n" + purple + "The result of your calculation is: " + result + reset);
                 //double memory = result;
             }
-        else {
+
+            else {
                 System.out.println("---Can not recognize operator. Try again!---");
            }
         }
