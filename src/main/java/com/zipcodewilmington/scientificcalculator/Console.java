@@ -74,6 +74,10 @@ public class Console {
                     return core.naturalLog(x);
                 case "16":
                     return core.inverseNatLog(x);
+                case "17": // Celsius to Fahrenheit
+                    return core.celsiusToFahrenheit(x);
+                case "18": // Fahrenheit to Celsius
+                    return core.fahrenheitToCelsius(x);
                 default:
                     println("---Can not recognize operator. Try again!---");
                     return null;
