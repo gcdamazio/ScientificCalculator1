@@ -40,8 +40,8 @@ public class Console {
                 return core.subtract(x, y);
             case "5":
                 return core.multiply(x, y);
-            case "6":
-                return core.divide(x, y);
+            //case "6":
+                //return core.divide(x, y);
             case "7":
                 return core.exp(x, y);
             case "8":
@@ -82,6 +82,18 @@ public class Console {
                     println("---Can not recognize operator. Try again!---");
                     return null;
             }
+    }
+
+    public static String Calculation4(String operator, double x, double y) {
+        Core core = new Core();
+
+        switch (operator) {
+            case "6":
+                return core.divide(x, y);
+            default:
+                println("---Can not recognize operator. Try again!---");
+                return null;
+        }
     }
 }
 

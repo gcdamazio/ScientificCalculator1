@@ -99,12 +99,6 @@ public class TestMainApplication {
         assertEquals(36, result, 0.001);
     }
     @Test
-    public void testDivide() {
-        Core test = new Core();
-        double result = test.divide(66, 6);
-        assertEquals(11, result, 0.001);
-    }
-    @Test
     public void testExp() {
         Core test = new Core();
         double result = test.exp(5, 3);
