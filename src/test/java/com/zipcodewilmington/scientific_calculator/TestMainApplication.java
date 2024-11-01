@@ -80,5 +80,40 @@ public class TestMainApplication {
         assertEquals(6.0, result, 0.001);
     }
 
-
+    @Test
+    public void testSum() {
+        Core test = new Core();
+        double result = test.sum(4, -10);
+        assertEquals(-6, result, 0.001);
+    }
+    @Test
+    public void testSubtract() {
+        Core test = new Core();
+        double result = test.subtract(4, -10);
+        assertEquals(14, result, 0.001);
+    }
+    @Test
+    public void testMultiply() {
+        Core test = new Core();
+        double result = test.multiply(-3, -12);
+        assertEquals(36, result, 0.001);
+    }
+    @Test
+    public void testDivide() {
+        Core test = new Core();
+        double result = test.divide(66, 6);
+        assertEquals(11, result, 0.001);
+    }
+    @Test
+    public void testExp() {
+        Core test = new Core();
+        double result = test.exp(5, 3);
+        assertEquals(125, result, 0.001);
+    }
+    @Test
+    public void testPercentage() {
+        Core test = new Core();
+        double result = test.percentage(40, 200);
+        assertEquals(20, result, 0.001);
+    }
 }
