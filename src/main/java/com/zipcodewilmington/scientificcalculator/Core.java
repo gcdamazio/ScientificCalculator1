@@ -16,9 +16,21 @@ public class Core {
         return input1 * input2;
     }
 
-    public double divide(double input1,double input2 ) {
+    /*public double divide(double input1,double input2 ) {
         return input1 / input2;
+    }*/
+    public static String errorDisplay() {
+        return "Error: You are not allowed to divide by zero.";
     }
+
+    public String divide(double input1,double input2 ) {
+        if (input2 == 0) {
+            return errorDisplay();
+        }
+        else{
+            return "The result of your calculation is: " + String.valueOf(input1 / input2);}
+    }
+
 
     public double square(double input1) {
         return Math.pow(input1, 2);

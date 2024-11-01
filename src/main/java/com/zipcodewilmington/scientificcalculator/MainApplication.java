@@ -59,7 +59,9 @@ public class MainApplication {
             Set<String> set3 = new HashSet<>();
             set3.addAll(Set.of("12", "13", "11"));
             Set<String> set2 = new HashSet<>();
-            set2.addAll(Set.of("1","2","5","6","7","8","9"));
+            set2.addAll(Set.of("1","2","5","7","8","9"));
+            Set<String> set4 = new HashSet<>();
+            set4.addAll(Set.of("6", "divide"));
             //String[] list1 ={"3","4","10"};
             //String[] list2 ={"1","2","5","6","7","8","9"};
 
@@ -112,6 +114,14 @@ public class MainApplication {
                 System.out.println("\n" + purple + "The result of your calculation is: " + result + reset);
                 //double memory = result;
             }
+
+            else if(set4.contains(choice)) {
+                double input1 = Console.getDoubleInput("Enter first number:");
+                double input2 = Console.getDoubleInput("Enter second number:");
+                String result = Console.Calculation4(choice, input1, input2);
+                System.out.println("\n" + purple  + result + reset);
+            }
+
 
             else {
                 System.out.println("---Can not recognize operator. Try again!---");
